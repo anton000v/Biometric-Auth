@@ -1,8 +1,8 @@
 {% extends 'TestApp/base.html' %}
 
 {% block content %}
-    <div id='iris-photos'>
-        <p>Загрузите фотографии радужки глаза, чтобы разблокировать возможность аутентификации с помощью нее.</p>
+    <div id='iris-photos' class="my-2">
+        <p class="alert alert-primary">Загрузите фотографии радужки глаза, чтобы разблокировать возможность аутентификации с помощью нее.</p>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input name='form_type' value='iris' hidden/>
@@ -37,9 +37,9 @@
             <button type="submit">Сохранить радужку</button>
         </form>
     </div>
-
-    <div id="fingerprint-photos">
-    <p>Загрузите фотографии отпечатка пальца, чтобы разблокировать возможность аутентификации с помощью него.</p>
+    <hr>
+    <div id="fingerprint-photos" class="my-5"> 
+    <p class="alert alert-primary">Загрузите фотографии отпечатка пальца, чтобы разблокировать возможность аутентификации с помощью него.</p>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <input name='form_type' value='fingerprint' hidden/>
@@ -74,9 +74,9 @@
         <button type="submit">Сохранить отпечаток пальца</button>
     </form>
   </div>
-
-    <div id='face-photos'>
-        <p>Загрузите фотографию лица, чтобы разблокировать возможность аутентификации с помощью нее.</p>
+    <hr>
+    <div id='face-photos' class="my-5">
+        <p class="alert alert-primary">Загрузите фотографию лица, чтобы разблокировать возможность аутентификации с помощью нее.</p>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input name='form_type' value='face' hidden/>
@@ -108,7 +108,7 @@
                 {% endfor %}
                 {{ formsets.face_formset.management_form }}
             </table>
-            <button type="submit">Сохранить лицо</button>
+            <button class="center" type="submit">Сохранить лицо</button>
         </form>
     </div>
 {% endblock %}

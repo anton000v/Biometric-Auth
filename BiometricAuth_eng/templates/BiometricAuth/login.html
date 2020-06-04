@@ -3,7 +3,7 @@
 {% block content %}
     <form method='POST'>
         {% csrf_token %}
-        <div class="pb-3"></div>
+        <div class="py-3">
         {% for field in form %}
         <div class="col-md-4">
             <label class="" for="username">
@@ -17,7 +17,7 @@
         <p></p>
     </div>
         {% endfor %}
-        <p></p>
+    </div>
         <div class="col-md-6">
         <button type="submit" class="btn btn-primary">Войти</button>
     </div>

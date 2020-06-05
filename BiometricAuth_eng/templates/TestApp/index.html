@@ -2,6 +2,18 @@
 
 {% block content %}
      {% if user.is_authenticated %}
-        <p class='my-2 text-success'>Здравствуйте, {{ user.username }}</p>
+     <div class='py-2'>
+        <h3>
+            Очень секретная информация.
+        </h3>
+        <p>
+            Здравствуйте, <span class='text-success'>{{ user.username }}</span>
+        </p>
+    </div>
+    {% else %}
+    <h4 class="py-2">
+        Чтобы увидеть контент сначала войдите в свой аккаунт.
+    </h4>
     {% endif %} 
+
 {% endblock %}

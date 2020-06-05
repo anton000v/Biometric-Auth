@@ -188,3 +188,8 @@ class TwoFactorAuth(View):
             'auth_forms': auth_forms,
         }
         return render(request,'BiometricAuth/two_factor_auth.html', context=context)
+
+# class SecretPage(View):
+#     def get(self, request):
+#         if not request.user.is_authenticate:
+
